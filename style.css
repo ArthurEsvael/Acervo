@@ -1,0 +1,229 @@
+html, body {
+  background-color: rgba(0, 0, 0, 0.671) !important; /* fundo preto */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* previne rolagem lateral */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.painel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  position: relative;
+  left: 15px;
+  background-color: transparent;
+  background-image: url('img/painel.png');
+  background-size: 430px;
+}
+
+.painel .back {
+  flex: 0 1 calc((100% / 3) - 20px);
+  max-width: calc((100% / 3) - 20px);
+  box-sizing: border-box;
+  background-color: rgba(102, 43, 211, 0.686);
+  border-radius: 20px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.678);
+  height: 0;
+  padding-bottom: calc((100% / 3) + 20px);
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.sticker-grid {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-auto-rows: 50px;
+  gap: 0;
+  width: 100%;
+  height: auto;
+}
+
+.sticker-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  user-select: none;
+}
+
+header {
+  background: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* main post */
+.main-post {
+  text-align: center;
+  min-height: 600px;
+  background-image: url("img/ventilador.png");
+  background-color: #123b4a;
+}
+
+.main-post > h1 {
+  background-image: url('img/image.jpeg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(49, 21, 102, 0.69);
+  color: #000;
+  text-align: center;
+  margin: 0;
+  padding: 5px 0;
+  font-weight: bold;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.back {
+  margin-top: 9px;
+  margin-right: 5px;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #216C87;
+  width: 160px;
+  height: 253px;
+}
+
+.backgold {
+  background-color: initial;
+  box-shadow: none !important;
+  height: 215px;
+}
+
+.back,
+.backgif,
+.backimg,
+.backclip {
+  box-shadow: 0 0 4px 2px black;
+}
+
+.back > .desc {
+  font-size: 14px;
+  color: rgb(255, 2, 2);
+  background: transparent;
+  border-radius: 5px;
+  position: relative;
+  top: -4px;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  max-width: 160px;
+}
+
+.backgif > .desc {
+  width: 300px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 0px;
+  top: 0;
+  background: transparent;
+  z-index: 4;
+  border-bottom: 1px solid transparent;
+}
+
+nav > ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 7px 9px;
+  background: #31A2CC;
+  transition: all 0.3s;
+}
+
+nav > ul > li:hover {
+  background: #24B6ED;
+}
+
+nav > ul > li > a {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none !important;
+  transition: all 0.3s;
+  color: #000 !important;
+  text-shadow: 1px 1px 0 black;
+}
+
+nav > ul > li:hover > a {
+  transition: all 0.3s;
+}
+
+.background-container {
+  position: fixed;
+  left: 0;
+  top: 17vh;
+  width: 100vw;
+  height:48vh;
+  background-image: url('img/acervo.png');
+  background-size: 450px; /* amplie para cortar mais */
+  background-position: center 25%; /* ajuste vertical para manter foco */
+  background-repeat: no-repeat;
+  z-index: 5;
+  pointer-events: none;
+}
+
+
+/* CENTRO MENU */
+.centro-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 10;
+}
+
+.centro-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centro-menu ul li {
+  padding: 7px 9px;
+  background: rgba(226, 114, 9, 0.68);
+  margin-bottom: 10px;
+  width: 150px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.centro-menu ul li:hover {
+  background: #e624ed;
+}
+
+.centro-menu ul li a {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none !important;
+  color: #000 !important;
+  text-shadow: 1px 1px 0 black;
+  transition: all 0.3s;
+}

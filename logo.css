@@ -1,0 +1,188 @@
+.botao {
+    cursor: pointer;
+    display: block;
+    /* display: inline-block; */
+    width: 109px;
+    height: 109px;
+    background-image: URL("img/ico.jpg");
+    ;
+    background-position: -100 -1;
+    border-radius: 10%;
+    transition: all 1s;
+  position: relative;
+  left: 0px; /* desloca 10px para a esquerda */
+  margin: 10px auto;
+    box-shadow: 0 0 0px 2px black;
+}
+
+.botao>i {
+    font-size: 100px;
+    position: relative;
+    left: -0.5;
+    top: 5;
+    color: black;
+    opacity: 0.5;
+    text-shadow: 0 2px 0px rgba(0, 0, 0, 0.5), 2px 0 0px rgba(253, 253, 253, 0.5), -2px 0 0px rgba(253, 253, 253, 0.5), 0 -2px 0px rgba(253, 253, 253, 0.5);
+}
+
+.botao:active {
+    transform: scale(0.8);
+}
+
+.botaoD {
+    text-align: center;
+    color: gold;
+    box-shadow: 0 0 0px 2px rgba(255, 215, 0, 0.5);
+}
+
+.botaoD>i {
+    color: gold;
+    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.8), 1px 0 0px rgba(253, 253, 253, 0.8), -1px 0 0px rgba(253, 253, 253, 0.8), 0 -1px 0px rgba(253, 253, 253, 0.8);
+}
+
+.botaoD~.desc {
+    color: yellow;
+    background: none !important;
+}
+
+.sexy {
+    background: url('img/sexy.jpg');
+    background-size: 120px;
+    background-position: 5 -30;
+}
+
+.feliz {
+    background: url("img/feliz.jpg");
+     background-size: 130px;
+    background-position: 0 -45;
+       background-repeat: no-repeat;
+}
+
+.seduz {
+    background-color: black;
+    background-image: url('img/seduz.jpg');
+    background-size: 150px;
+    background-position: -10 -20;
+    background-repeat: no-repeat;
+}
+
+.ico{
+    background: url('img/ico.png');
+    background-size: 200px;
+    background-position: 0 -30;
+}
+
+.hellen {
+    background: url('img/helen.jpg');
+    background-position: -15 -70;
+    background-size: 150px;
+}
+
+.medico {
+    background: url('img/medico.jpg');
+    background-size: 200px;
+    background-position: -40 -95;
+}
+
+
+
+.serio{
+    background: url('img/serio.jpg');
+
+          background-position: 10 -50;
+    background-size: 130px;
+
+}
+
+.surpreso {
+    background: url('img/surpreso.jpg');
+      background-position: -20 -10;
+    background-size: 150px;
+
+}
+
+.caps {
+    background: url('img/caps.jpg');
+          background-position: -1 -10;
+    background-size: 100px;
+}
+
+.gordo {
+    background: url('img/gordo.jpg');
+       background-size: 150px;
+    background-position: -40 -5;
+}
+
+.gm {
+    background: url('img/gm.jpg');
+           background-size: 180px;
+    background-position: -40 1;
+}
+
+.nerd {
+    background: url('img/nerd.jpg');
+               background-size: 180px;
+    background-position: -70 ;         
+}
+
+.nojo {
+    background: url('img/nojo.jpg');
+               background-size: 180px;
+    background-position: -40 1;
+}
+
+.psico {
+    background: url('img/psico.jpg');
+         background-size: 170px;  
+           background-position: -10 -50;
+}
+
+.gangplank {
+    background: url('img/Gangplank.jpg');
+}
+
+.urgot {
+    background: url('img/Urgot.png');
+}
+
+.lee {
+    background: url('img/LeeSin.png');
+}
+
+.jax {
+    background: url('img/Jax.png');
+}
+
+.ahri {
+    background: url('img/Ahri.png');
+}
+
+.shaco {
+    background: url('img/Shaco.png');
+}
+
+.xinzhao {
+    background: url('img/XinZhao.png');
+}
+
+.karthus {
+    background: url('img/Karthus.png');
+}
+
+.zed {
+    background: url('img/Zed.png')
+}
+
+.nocturne {
+    background: url('img/Nocturne.png')
+}
+
+.nasus {
+    background: url('img/Nasus.png')
+}
+
+.gratis {
+    background: url('img/gratis.jpg');
+    background-size: 330px;
+    background-position: -103 -57;
+}

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Galeria estilo Friv</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #160b00e1 url('img/textura_friv.png') repeat;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+      max-height: 100vh;
+      overflow-y: hidden; /* para o zoom não ser cortado */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-image-top {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+      margin: 0;
+    }
+
+    .header-logo {
+      width: 100vw;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      z-index: 1;
+    }
+
+    .friv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 60px);
+      gap: 7px;
+      justify-content: center;
+      padding: 0;
+      margin-top: 0;
+      flex: 1 1 auto;
+      width: 100%;
+      overflow: visible !important; /* importante para o zoom */
+      max-height: calc(100vh - 300px);
+      box-sizing: border-box;
+      position: relative;
+      z-index: 30; /* alto para ficar sobre footer e header */
+        margin-top: 8px; /* aumenta o espaço abaixo do header */
+        margin-bottom: 100px;
+    }
+
+    .friv-grid .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+      border: 2px solid #341f6b;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative; /* para permitir absolute interno */
+    }
+    .friv-grid .icon img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 14px;
+      pointer-events: none;
+      user-select: none;
+      display: block;
+      z-index: 1;
+    }
+    .friv-grid .icon:hover {
+      transform: scale(1.1);
+      border-color: #ffe931;
+      box-shadow: 0 0 10px 4px #ffe931;
+    }
+.zoomed {
+  transform: scale(1.5);
+  z-index: 1000 !important;
+  position: relative !important;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 14px;
+
+  animation: glowPulse 1.1s ease-in-out forwards; /* uma vez só, mantém estado final */
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px 2px #ffaa00;
+    border-color: #ffaa00;
+  }
+  50% {
+    box-shadow: 0 0 15px 6px #ffe931;
+    border-color: #ffe931;
+  }
+}
+
+
+
+/* Estilos base (mobile) */
+.centro-menu {
+  position: absolute; /* para posicionar relativamente ao container */
+  left: 50.4%;
+  transform: translateX(-50%);
+  margin-top: 330px; /* DESKTOP */
+  width: 95px;
+  height: auto;
+  max-height: none;
+  padding: 8px 18px;
+  background: rgba(85, 41, 2, 0.733);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  z-index: 30 !important;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+    .centro-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 160px;
+    }
+    .centro-menu ul li {
+      display: block;
+      padding: 8px 14px;
+      background: #d8520518;
+      transition: all 0.3s;
+      margin-bottom: 9px;
+      width: 100px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      white-space: nowrap;
+    }
+    .centro-menu ul li:hover {
+      background: #e624ed;
+      transform: scale(1.05);
+    }
+
+@media (min-width: 601px) {
+  .centro-menu {
+    position: fixed !important;
+    top: 500px; /* valor para desktop */
+    left: 50.3%;
+    transform: translate(-50%, -50%);
+    width: 80.5px;
+    height: 120px;
+    padding: 10px 25px;
+  }
+}
+
+/* Você pode ajustar mais media queries se quiser para tablets intermediários */
+@media (min-width: 1px) {
+  .centro-menu {
+    top: -30px; /* CELULAR */
+    
+  }
+}
+
+    
+    /* ============================ LETRAS BOTAO MENU ====== */
+.centro-menu ul li a {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none !important;
+  color: #ffffff; /* cor neon rosa/fúcsia, pode ajustar */
+  text-shadow:
+    0 0 5px #ff9900,
+    0 0 10px #ff9900,
+    0 0 20px #ff9900,
+    0 0 40px #ff9900,
+    0 0 80px #ff9900;
+  font-family: Georgia, serif;
+  transition: all 0.3s;
+}
+
+    .friv-logo {
+      width: 220px;
+      height: 130px;
+      background: url('img/friv-logo.png') center/contain no-repeat;
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 15;
+      pointer-events: none;
+    }
+
+    body {
+      padding-bottom: 132px; /* espaço para o footer */
+    }
+
+    footer {
+      background: rgb(0, 0, 0);
+      color: rgba(255, 255, 255, 0.877);
+      padding: 0px;
+      font-size: 12px;
+      width: 103%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 130px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-sizing: border-box;
+    }
+footer .row {
+  display: flex;
+  justify-content: space-between; /* redes nas pontas e texto no meio */
+  align-items: center;
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+footer .col-md-5 {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255, 108, 108, 0.88);
+  font-size: 14px;
+}
+
+footer .col-md-3 {
+  flex: 1;
+  display: flex;
+  justify-content: space-between; /* um ícone em cada ponta */
+  max-width: 120px;
+}
+
+footer .col-md-3 ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+footer .col-md-3 ul li a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+footer .col-md-3 ul li a:hover {
+  color: #ffe931;
+}
+
+
+
+    footer h4 {
+      font-weight: bold;
+      margin: 0 0 5px 0;
+      flex: 1 1 100%;
+      text-align: center;
+    }
+    footer a {
+      background: #3b5998;
+      color: white;
+      padding: 3px 7px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 3px;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex: 1 1 100%;
+    }
+    footer ul li a {
+      color: white;
+      font-size: 18px;
+    }
+
+    .scrolling-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      z-index: 101;
+    }
+
+    .scrolling-text {
+      white-space: nowrap;
+      display: inline-block;
+      color: white;
+      font-weight: bold;
+      padding-left: 100%;
+      animation: scroll-left 10s linear infinite;
+    }
+/* ---------------------------------------------------- LETRAS TOPO */
+.scrolling-banner-top {
+
+  top: 30;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(0,0,0,0.72);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  font-family: Arial, sans-serif;
+}
+
+.fixed-title {
+  font-weight: bold;
+  font-size: 12px;
+  padding-left: 22px;
+  margin-right: 1px;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff7f00,
+    0 0 15px #ffff00,
+    0 0 20px #00ff00,
+    0 0 25px #0000ff,
+    0 0 30px #4b0082,
+    0 0 35px #9400d3;
+  animation: pulseRainbow 4s infinite alternate;
+}
+
+@keyframes pulseRainbow {
+  0% {
+    text-shadow:
+      0 0 6px #ff0000,
+      0 0 12px #ff7f00,
+      0 0 18px #ffff00;
+    color: #ff0000;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #00ff00,
+      0 0 20px #0000ff,
+      0 0 28px #4b0082;
+    color: #00ff00;
+  }
+  100% {
+    text-shadow:
+      0 0 6px #9400d3,
+      0 0 12px #ff0000,
+      0 0 18px #ff7f00;
+    color: #9400d3;
+  }
+}
+
+.scrolling-names {
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
+.scrolling-names span {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15x;
+  letter-spacing: 1px;
+  padding-left: 65px;
+  animation: scroll-names 13s linear infinite;
+
+}
+
+@keyframes scroll-names {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="header-image-top">
+    <img src="img/acervo.png" alt="Arthur Esvael - Acervo" class="header-logo" />
+  </div>
+
+
+<div class="scrolling-banner-top">
+  <span class="fixed-title">Esvaelistas:</span>
+  <div class="scrolling-names">
+    <span>
+      • Victor colt • Hades • Samara • Vicvitorio • Isabelly • Pyetra • Gigi • Ione • Veronica • jm • Gm • Lorenzo • Jv • Julia • Crivelli • 
+    </span>
+  </div>
+</div>
+
+  <div class="friv-grid" id="frivGrid"></div>
+
+  <nav class="centro-menu">
+    <ul>
+      <li><a href="/AE.github.io\acervo.html" target="_blank">ACERVO</a></li>
+      <li><a href="/gifs.html">GIFs</a></li>
+      <li><a href="/imagens.html">Imagens</a></li>
+    </ul>
+  </nav>
+
+  <div class="friv-logo"></div>
+
+  <div class="scrolling-banner">
+    <div class="scrolling-text">
+      •  DOE PIX PARA ARTHUR ESVAEL: 228.428.428-04  •
+    </div>
+  </div>
+
+<footer>
+  <div class="row">
+    <div class="redes-esquerda">
+      <ul>
+        <li><a href="https://www.instagram.com/arthur.esvael/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <div class="texto-centro">
+      <a href="#" target="_blank"><b>Victor Colt</b></a> © 2025
+    </div>
+    <div class="redes-direita">
+      <ul>
+        <li><a href="https://www.youtube.com/@sirarthuresvael9296" target="_blank"><i class="fa fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+const zoomIndices = [
+  1,2,3,4,5,6,
+  12,11,10,9,8,7,
+  13,18,19,
+  30,31,32,33,34,35,
+  36,35,34,33,32,31,
+  37,38,39,40,41,42,
+  48,47,46,45,44,43,
+  49,50,51,52,53,54,
+  60,59,58,57,56,55
+];
+const totalImages = 42;
+const totalAllImages = 60; // número total de imagens possíveis na pasta
+const grid = document.getElementById('frivGrid');
+const animationDuration = 700; // ajuste para velocidade desejada (700ms recomendado)
+
+// Popula inicialmente com as 42 imagens
+for(let i = 1; i <= totalImages; i++){
+  const div = document.createElement('div');
+  div.classList.add('icon');
+  div.dataset.index = i;
+  div.dataset.imageId = i; // controla qual imagem está naquela posição
+  const img = document.createElement('img');
+  img.src = `img/sticker/${i}.webp`;
+  img.alt = `Sticker ${i}`;
+  img.onerror = () => div.style.display = 'none';
+  div.appendChild(img);
+  grid.appendChild(div);
+}
+
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+
+function zoomSequence() {
+  let current = 0;
+  const allIcons = Array.from(grid.children);
+  let shuffledIndices = shuffle([...zoomIndices]);
+
+  function zoomNext() {
+    allIcons.forEach(icon => {
+      icon.classList.remove('zoomed');
+      icon.style.transform = '';
+      icon.style.zIndex = '';
+      icon.style.position = 'relative';
+      icon.style.animation = '';
+    });
+
+    const idx = shuffledIndices[current];
+    const icon = allIcons.find(el => +el.dataset.index === idx);
+    if (!icon) {
+      current++;
+      setTimeout(zoomNext, animationDuration);
+      return;
+    }
+
+    icon.classList.add('zoomed'); 
+    icon.style.transform = 'scale(1.5)';
+    icon.style.zIndex = '1000';
+    icon.style.position = 'relative';
+    icon.style.animation = 'glowPulse 1.1s ease-in-out forwards';
+
+    setTimeout(() => {
+      let currentImageId = Number(icon.dataset.imageId);
+      let nextImageId = currentImageId + totalImages;
+      if (nextImageId > totalAllImages) {
+        nextImageId = nextImageId % totalAllImages;
+        if(nextImageId === 0) nextImageId = totalImages;
+      }
+      icon.dataset.imageId = nextImageId;
+      icon.querySelector('img').src = `img/sticker/${nextImageId}.webp`;
+
+      // Limpa efeito para próximo ciclo
+      icon.classList.remove('zoomed');
+      icon.style.transform = '';
+      icon.style.zIndex = '';
+      icon.style.position = 'relative';
+      icon.style.animation = '';
+
+      // Avança para o próximo
+      current++;
+      if (current >= shuffledIndices.length) {
+        shuffledIndices = shuffle([...zoomIndices]);
+        current = 0;
+      }
+      zoomNext();  // chama a próxima animação assim que a atual termina
+    }, animationDuration);
+  }
+  zoomNext();
+}
+
+window.onload = zoomSequence;
+
+</script>
+
+</body>
+</html>
