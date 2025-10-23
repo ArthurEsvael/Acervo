@@ -137,40 +137,58 @@
            background-position: -10 -50;
 }
 
-.gangplank {
-    background: url('img/Gangplank.jpg');
+.risof {
+    background: url('img/sticker/19.webp');
+            background-size: 190px;  
+           background-position: -50 -30;
+              background-repeat: no-repeat;
 }
 
-.urgot {
-    background: url('img/Urgot.png');
+.loiro {
+    background: url('img/sticker/8.webp');
+            background-size: 170px;  
+           background-position: -40 -30;
 }
 
-.lee {
-    background: url('img/LeeSin.png');
+.rico {
+    background: url('img/sticker/28.webp');
+            background-size: 170px;  
+           background-position: -30 -40;
 }
 
-.jax {
-    background: url('img/Jax.png');
+.fogo {
+    background: url('img/sticker/248.webp');
+            background-size: 170px;  
+           background-position: -10 -30;
 }
 
 .ahri {
     background: url('img/Ahri.png');
+            background-size: 170px;  
+           background-position: -10 -50;
 }
 
 .shaco {
     background: url('img/Shaco.png');
+            background-size: 170px;  
+           background-position: -10 -50;
 }
 
 .xinzhao {
     background: url('img/XinZhao.png');
+            background-size: 170px;  
+           background-position: -10 -50;
 }
 
 .karthus {
     background: url('img/Karthus.png');
+            background-size: 170px;  
+           background-position: -10 -50;
 }
 
 .zed {
     background: url('img/Zed.png')
+    
 }
 
 .nocturne {
