@@ -119,10 +119,11 @@
     background-position: -40 1;
 }
 
-.nerd {
-    background: url('img/nerd.jpg');
+.russo {
+    background: url('img/sticker/92.webp');
+
                background-size: 180px;
-    background-position: -70 ;         
+    background-position: -40 ;         
 }
 
 .nojo {
@@ -162,37 +163,41 @@
            background-position: -10 -30;
 }
 
-.ahri {
-    background: url('img/Ahri.png');
+.viver {
+   background: url('img/sticker/115.webp');
+               background-size: 170px;  
+           background-position: -30 -50;
+}
+
+.hitler{
+     background: url('img/sticker/29.webp');
             background-size: 170px;  
-           background-position: -10 -50;
+           background-position: -49 -50;
+           background-repeat: no-repeat;
 }
 
-.shaco {
-    background: url('img/Shaco.png');
-            background-size: 170px;  
-           background-position: -10 -50;
+.raiva {
+     background: url('img/sticker/7.webp');
+               background-size: 140px;  
+           background-position: -10 -30;
+           background-repeat: no-repeat;
 }
 
-.xinzhao {
-    background: url('img/XinZhao.png');
-            background-size: 170px;  
-           background-position: -10 -50;
+.noites {
+     background: url('img/sticker/202.webp');
+            background-size: 140px;  
+           background-position: -10 -30;
+            background-repeat: no-repeat;
 }
 
-.karthus {
-    background: url('img/Karthus.png');
-            background-size: 170px;  
-           background-position: -10 -50;
-}
 
-.zed {
-    background: url('img/Zed.png')
-    
-}
 
-.nocturne {
-    background: url('img/Nocturne.png')
+.hello {
+      background: url('img/sticker/140.webp');
+            background-size: 140px;  
+           background-position: -10 -30;
+            background-repeat: no-repeat;
+
 }
 
 .nasus {
