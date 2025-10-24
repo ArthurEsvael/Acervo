@@ -1,8 +1,8 @@
 html, body {
-  background-color: rgba(0, 0, 0, 0.671) !important; /* fundo preto */
-  margin: 0;
+  background-color: rgba(0, 0, 0, 0.671) !important; 
+ margin: 0;
   padding: 0;
-  overflow-x: hidden; /* previne rolagem lateral */
+  overflow-x: hidden; 
 }
 
 *, *::before, *::after {
@@ -226,4 +226,4 @@ nav > ul > li:hover > a {
   color: #000 !important;
   text-shadow: 1px 1px 0 black;
   transition: all 0.3s;
-}
+} 

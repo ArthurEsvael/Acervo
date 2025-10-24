@@ -200,12 +200,53 @@
 
 }
 
-.nasus {
-    background: url('img/Nasus.png')
+.cotoco {
+      background: url('img/sticker/51.webp');
+            background-size: 140px;  
+           background-position: -10 -30;
+            background-repeat: no-repeat;
+
 }
 
-.gratis {
-    background: url('img/gratis.jpg');
-    background-size: 330px;
-    background-position: -103 -57;
+.bemal {
+     background: url('img/sticker/72.webp');;
+    background-size: 140px;
+    background-position: -10 -27;
+}
+
+.principe {
+     background: url('img/sticker/151.webp');;
+    background-size: 120px;
+    background-position: -10 -7;
+}
+
+.pobre {
+     background: url('img/sticker/205.webp');;
+    background-size: 170px;
+    background-position: -30 -37;
+}
+
+.calma {
+     background: url('img/sticker/58.webp');;
+    background-size: 140px;
+    background-position: -10 -7;
+}
+
+
+.seios {
+     background: url('img/sticker/259.webp');;
+    background-size: 150px;
+    background-position: -30 -17;
+}
+
+.morte {
+     background: url('img/sticker/33.webp');;
+    background-size: 120px;
+    background-position: -10 -7;
+}
+
+.ngm {
+     background: url('img/sticker/256.webp');;
+    background-size: 200px;
+    background-position: -44 -14;
 }
